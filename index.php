@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="scripts/jquery.inslider.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-		    instagram.init();
+	    	loader();
 		    $("#slide img:eq(0)").addClass("ativo").show();
 		    var texto = $(".ativo").attr("data-description");
 		    $("#slide").prepend("<p>" + texto + "</p>");
@@ -19,21 +19,35 @@
 		    	if($(".ativo").next().size()){
 		    		$(".ativo").fadeOut().removeClass("ativo").next().fadeIn().addClass("ativo");
 		    		var texto = $(".ativo").attr("data-description");
-		    		$("#slide p").hide().html(texto).delay(500).fadeIn();
+		    		$("#slide p").hide().html(texto).delay(100).fadeIn();
 		    	}else {
 		    		$(".ativo").fadeOut().removeClass("ativo");
 		    		$("#slide img:eq(0)").fadeIn().addClass("ativo");
 		    		var texto = $(".ativo").attr("data-description");
-		    		$("#slide p").hide().html(texto).delay(500).fadeIn();
-		    		
+		    		$("#slide p").hide().html(texto).delay(100).fadeIn();
+		    		limpar();
 		    	}
+		    }
+
+		    function loader(){
+		    	instagram.init();
+		    }
+
+		    function limpar(){
+		    	$("#slide").empty();
+		    	$("#slide").append("<img src='media/1.png' data-description='#arraiaco' />");
+		    	$("#slide img:eq(0)").addClass("ativo").show();
+			    var texto = $(".ativo").attr("data-description");
+			    $("#slide").prepend("<p>" + texto + "</p>");
+			    loader();
 		    }
 		})
     </script>
 </head>
 <body>
+		<div id="logo"></div>
 	<figure id="slide">
-		<img src="media/1.jpg" data-description="#arraiaco" />
+		<img src="media/1.png" data-description="#arraiaco" />
 	</figure>
 </body>
 </html>
