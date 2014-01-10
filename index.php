@@ -14,7 +14,7 @@
 		    $("#slide img:eq(0)").addClass("ativo").show();
 		    var texto = $(".ativo").attr("data-description");
 		    $("#slide").prepend("<p>" + texto + "</p>");
-		    setInterval(slide, 1000);
+		    setInterval(slide, 5000);
 		    function slide(){
 		    	if($(".ativo").next().size()){
 		    		$(".ativo").fadeOut().removeClass("ativo").next().fadeIn().addClass("ativo");

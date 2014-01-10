@@ -10,7 +10,7 @@ var instagram = function() {
 			instagram.loadImages();
 		},
 		loadImages: function() {
-			var getImagesURL = 'https://api.instagram.com/v1/tags/arraiaco/media/recent?client_id='+ clientID +'&access_token='+ accessToken +'';
+			var getImagesURL = 'https://api.instagram.com/v1/tags/'+tagName+'/media/recent?client_id='+ clientID +'&access_token='+ accessToken +'';
 			$.ajax({
 				type: "GET",
 				dataType: "jsonp",
