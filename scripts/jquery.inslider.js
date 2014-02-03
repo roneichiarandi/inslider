@@ -1,5 +1,5 @@
-var clientID = 'c57412f72f474cfcbc9220f55425a8b4'
-var accessToken = '458783804.c57412f.4f7846bf4c65481b931a9f405ca1ed62';
+var clientID = '[instragram-client-id]';
+var accessToken = '[instagram-access-token]';
 var tagName = 'arraiaco';
 var limit = 999; //Limite máximo de fotos
 var setSize = "standard";
