@@ -1,8 +1,8 @@
 var clientID = '[instragram-client-id]';
 var accessToken = '[instagram-access-token]';
-var tagName = 'arraiaco';
-var limit = 999; //Limite máximo de fotos
-var setSize = "standard";
+var tagName = '[tagname-search]';
+var limit = 999; //Limit Photos
+var setSize = "standard"; //resolution images (standard/medium/small)
 
 var instagram = function() {
 	return {
